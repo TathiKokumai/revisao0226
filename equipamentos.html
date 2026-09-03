@@ -4,8 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="equipamentos.css">
 </head>
 <body>
-    <h1> Cadastro de Equipamentos</h1>
+        <div class="container">
+
+        <h1>Cadastro de Equipamentos</h1>
+
+        <div class="formulario">
+
+            <div class="campo">
+                <label for="nome">Nome do equipamento</label>
+                <input 
+                    type="text" 
+                    id="nome" 
+                    placeholder="Ex: Notebook Dell"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="categoria">Categoria</label>
+
+                <select id="categoria">
+                    <option value="">Selecione uma categoria</option>
+                    <option value="notebook">Notebook</option>
+                    <option value="computador">Computador</option>
+                    <option value="monitor">Monitor</option>
+                    <option value="projetor">Projetor</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="numero">Número de patrimônio</label>
+                <input 
+                    type="text" 
+                    id="numero" 
+                    placeholder="Ex: PAT-001"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="marca">Marca</label>
+                <input 
+                    type="text" 
+                    id="marca" 
+                    placeholder="Ex: Dell"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="modelo">Modelo</label>
+                <input 
+                    type="text" 
+                    id="modelo" 
+                    placeholder="Ex: Inspiron 15"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="quantidade">Quantidade</label>
+                <input 
+                    type="number" 
+                    id="quantidade" 
+                    min="1"
+                    placeholder="Ex: 10"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="estado">Estado do equipamento</label>
+
+                <select id="estado">
+                    <option value="">Selecione o estado</option>
+                    <option value="novo">Novo</option>
+                    <option value="bom">Bom</option>
+                    <option value="manutencao">Em manutenção</option>
+                    <option value="danificado">Danificado</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="localizacao">Localização</label>
+                <input 
+                    type="text" 
+                    id="localizacao" 
+                    placeholder="Ex: Laboratório 01"
+                >
+            </div>
+
+            <div class="campo descricao">
+                <label for="descricao">Descrição</label>
+
+                <textarea 
+                    id="descricao" 
+                    placeholder="Digite uma descrição do equipamento..."
+                ></textarea>
+            </div>
+
+            <button type="button">
+                Cadastrar Equipamento
+            </button>
+
+        </div>
+
+
+        <h2>Equipamentos Cadastrados</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Equipamento</th>
+                    <th>Categoria</th>
+                    <th>Patrimônio</th>
+                    <th>Marca</th>
+                    <th>Estado</th>
+                    <th>Localização</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>Notebook Dell</td>
+                    <td>Notebook</td>
+                    <td>PAT-001</td>
+                    <td>Dell</td>
+                    <td>
+                        <span class="status bom">
+                            Bom
+                        </span>
+                    </td>
+                    <td>Laboratório 01</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Projetor Epson</td>
+                    <td>Projetor</td>
+                    <td>PAT-002</td>
+                    <td>Epson</td>
+                    <td>
+                        <span class="status novo">
+                            Novo
+                        </span>
+                    </td>
+                    <td>Sala 03</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Monitor LG</td>
+                    <td>Monitor</td>
+                    <td>PAT-003</td>
+                    <td>LG</td>
+                    <td>
+                        <span class="status manutencao">
+                            Manutenção
+                        </span>
+                    </td>
+                    <td>Laboratório 02</td>
+                </tr>
+
+            </tbody>
+
+        </table>
 </body>
 </html>

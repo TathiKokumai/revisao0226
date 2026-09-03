@@ -4,8 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="emprestimos.css">
 </head>
 <body>
-    <h1> Registros de Empréstimos</h1>
+     <div class="container">
+
+        <h1>Registros de Empréstimos</h1>
+
+        <div class="formulario">
+
+            <div class="campo">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" placeholder="Nome do usuário">
+            </div>
+
+            <div class="campo">
+                <label for="livro">Livro</label>
+                <input type="text" id="livro" placeholder="Nome do livro">
+            </div>
+
+            <div class="campo">
+                <label for="dataEmprestimo">Data do empréstimo</label>
+                <input type="date" id="dataEmprestimo">
+            </div>
+
+            <div class="campo">
+                <label for="dataDevolucao">Data de devolução</label>
+                <input type="date" id="dataDevolucao">
+            </div>
+
+            <div class="campo">
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="Pendente">Pendente</option>
+                    <option value="Devolvido">Devolvido</option>
+                    <option value="Atrasado">Atrasado</option>
+                </select>
+            </div>
+
+            <button type="button">Registrar Empréstimo</button>
+
+        </div>
+
+        <h2>Empréstimos Registrados</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuário</th>
+                    <th>Livro</th>
+                    <th>Empréstimo</th>
+                    <th>Devolução</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>João Silva</td>
+                    <td>O Pequeno Príncipe</td>
+                    <td>03/09/2026</td>
+                    <td>17/09/2026</td>
+                    <td>
+                        <span class="status pendente">Pendente</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Maria Santos</td>
+                    <td>Dom Casmurro</td>
+                    <td>01/09/2026</td>
+                    <td>15/09/2026</td>
+                    <td>
+                        <span class="status devolvido">Devolvido</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Pedro Oliveira</td>
+                    <td>Harry Potter</td>
+                    <td>20/08/2026</td>
+                    <td>03/09/2026</td>
+                    <td>
+                        <span class="status atrasado">Atrasado</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
 </body>
 </html>
